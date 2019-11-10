@@ -46,7 +46,7 @@ rGraf<-function(data, group_var, xlab, flip,col, theme, title){
 
   ## Frequency Graph
   bargraph<- ggplot(data=summ_table, aes(x={{ group_var }}, y = perc)) +
-    geom_bar(stat = "identity",fill = "#154360") +
+    geom_bar(stat = "identity",fill = col) +
     theme+
     #theme(axis.text.x =element_text(angle = 25))+
     labs(title =paste("",title, sep=" "),x = xlab, y = "Percentage")
