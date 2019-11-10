@@ -15,11 +15,11 @@ rGraf(data, group_var, xlab, flip, col, theme, title)
 
 \item{flip}{TRUE/FALSE: Whether the graph should be flipped or not}
 
+\item{col}{Colour to be used in the graph}
+
 \item{theme}{The theme you want to use for your graphs}
 
 \item{title}{The title of your graph}
-
-\item{flip}{Colour to be used in the graph}
 }
 \value{
 A table and a graph

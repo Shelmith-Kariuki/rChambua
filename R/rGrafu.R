@@ -4,7 +4,7 @@
 #' @param group_var The variable that you want to analyse
 #' @param xlab The x axis label
 #' @param flip TRUE/FALSE: Whether the graph should be flipped or not
-#' @param flip Colour to be used in the graph
+#' @param col Colour to be used in the graph
 #' @param theme The theme you want to use for your graphs
 #' @param title The title of your graph
 
@@ -45,17 +45,15 @@ rGraf<-function(data, group_var, xlab, flip,col, theme, title){
 
 
   ## Frequency Graph
-  bargraph<- ggplot(data=summ_table, aes(x={{ group_var }}, y = perc)) +
+  bargraph <- ggplot(data=summ_table, aes(x={{ group_var }}, y = perc)) +
     geom_bar(stat = "identity",fill = col) +
     theme+
-    #theme(axis.text.x =element_text(angle = 25))+
     labs(title =paste("",title, sep=" "),x = xlab, y = "Percentage")
 
   if(flip == TRUE){
-    bargraph=ggplot(data=summ_table, aes_string(x= paste0("reorder(",colnames(summ_table)[1],", perc)")  , y = "perc")) +
+    bargraph = ggplot(data=summ_table, aes_string(x= paste0("reorder(",colnames(summ_table)[1],", perc)")  , y = "perc")) +
       geom_bar(stat = "identity",fill = col) +
       theme+
-      #theme(axis.text.x =element_text(angle = 25))+
       labs(title =paste("",title, sep=" "),x = xlab, y = "Percentage")+
       geom_text(aes(label = perc), family="Source Sans Pro Semibold",
                 vjust = 0.5,hjust = -0.5, size = 5)+
@@ -63,7 +61,7 @@ rGraf<-function(data, group_var, xlab, flip,col, theme, title){
       ylim(c(0,max(summ_table$perc + 10)))
   }else
     {
-    bargraph=bargraph+
+    bargraph = bargraph+
       geom_text(aes(label =perc),vjust = -0.25, size = 5)
 }
   print(bargraph)
