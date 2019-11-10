@@ -16,4 +16,7 @@ Imports:
     dplyr,
     openxlsx,
     tidyr,
-    readxl
+    readxl,
+    ggplot2,
+    rlang,
+    kableExtra
