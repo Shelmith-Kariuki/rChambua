@@ -1,13 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rGeopoll
+# rChambua
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-The goal of rGeopoll is to carry out descriptive analysis at Geopoll
+rChambua contains functions that can be used for day to day data
+analysis tasks.
 
 ## Installation
 
@@ -15,14 +16,14 @@ You can install the released version of rGeopoll from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("rGeopoll")
+install.packages("rChambua")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("Shelmith-Kariuki/rGeopoll")
+devtools::install_github("Shelmith-Kariuki/rChambua")
 ```
 
 ## Example
@@ -30,7 +31,7 @@ devtools::install_github("Shelmith-Kariuki/rGeopoll")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(rGeopoll)
+library(rChambua)
 ## basic example code
 ```
 
