@@ -30,14 +30,14 @@ rGraf<-function(data, group_var, xlab, flip, theme, title){
   ## Frequency Graph
   bargraph<- ggplot(data=summ_table, aes(x={{ group_var }}, y = perc)) +
     geom_bar(stat = "identity",fill = "#154360") +
-    geopoll_theme+
+    theme+
     #theme(axis.text.x =element_text(angle = 25))+
     labs(title =paste("",title, sep=" "),x = xlab, y = "Percentage")
 
   if(flip == TRUE){
     bargraph=ggplot(data=summ_table, aes_string(x= paste0("reorder(",colnames(summ_table)[1],", perc)")  , y = "perc")) +
       geom_bar(stat = "identity",fill = "#154360") +
-      geopoll_theme+
+      theme+
       #theme(axis.text.x =element_text(angle = 25))+
       labs(title =paste("",title, sep=" "),x = xlab, y = "Percentage")+
       geom_text(aes(label = perc), family="Source Sans Pro Semibold",
@@ -51,3 +51,5 @@ rGraf<-function(data, group_var, xlab, flip, theme, title){
 }
   print(bargraph)
 }
+
+rGraf(data = wafanyikazi,group_var = Gender, xlab = "Gender",flip = FALSE, theme = theme_bw(), title = "Distribution of Gender")
