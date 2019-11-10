@@ -4,16 +4,33 @@
 #' @param group_var The variable that you want to analyse
 #' @param xlab The x axis label
 #' @param flip TRUE/FALSE: Whether the graph should be flipped or not
-#' @param title The title of your graph
+#' @param flip Colour to be used in the graph
 #' @param theme The theme you want to use for your graphs
+#' @param title The title of your graph
+
 #'
 #' @return A table and a graph
 #' @export
 #'
-#' @examples rGraf(data = wafanyikazi,group_var = Gender, xlab = "Gender",flip = FALSE, theme = theme_bw(), title = "Distribution of Gender")
+#' @examples
 
+#' ## Specify the theme
 #'
-rGraf<-function(data, group_var, xlab, flip, theme, title){
+#' theme <- theme(legend.position = "right",
+#'          legend.direction = "vertical",
+#'          legend.title = element_blank(),
+#'          plot.title = element_text( size = rel(1.6), hjust = 0.5),
+#'          plot.subtitle = element_text(size = rel(1.4), hjust = 0.5),
+#'          axis.text.x = element_text(size =rel(1.4),angle = 0),
+#'          axis.text.y = element_text(size =rel(1.4),angle = 0),
+#'          axis.title = element_text( size = rel(1.5)),
+#'          panel.background = element_rect(fill = NA))
+#'
+#' ## Call the function
+#'
+#' rGraf(data = wafanyikazi,group_var = Gender, xlab = "Gender",flip = FALSE,col= "#154360", theme = theme_bw(), title = "Distribution of Gender")
+#'
+rGraf<-function(data, group_var, xlab, flip,col, theme, title){
 
   ## Summary table
   summ_table<-data%>%
@@ -36,7 +53,7 @@ rGraf<-function(data, group_var, xlab, flip, theme, title){
 
   if(flip == TRUE){
     bargraph=ggplot(data=summ_table, aes_string(x= paste0("reorder(",colnames(summ_table)[1],", perc)")  , y = "perc")) +
-      geom_bar(stat = "identity",fill = "#154360") +
+      geom_bar(stat = "identity",fill = col) +
       theme+
       #theme(axis.text.x =element_text(angle = 25))+
       labs(title =paste("",title, sep=" "),x = xlab, y = "Percentage")+
@@ -52,4 +69,3 @@ rGraf<-function(data, group_var, xlab, flip, theme, title){
   print(bargraph)
 }
 
-rGraf(data = wafanyikazi,group_var = Gender, xlab = "Gender",flip = FALSE, theme = theme_bw(), title = "Distribution of Gender")

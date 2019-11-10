@@ -4,7 +4,7 @@
 \alias{rGraf}
 \title{This function is used to to generate summary tables and graphs showing frequencies and percentages.}
 \usage{
-rGraf(data, group_var, xlab, flip, theme, title)
+rGraf(data, group_var, xlab, flip, col, theme, title)
 }
 \arguments{
 \item{data}{The data to be used}
@@ -18,6 +18,8 @@ rGraf(data, group_var, xlab, flip, theme, title)
 \item{theme}{The theme you want to use for your graphs}
 
 \item{title}{The title of your graph}
+
+\item{flip}{Colour to be used in the graph}
 }
 \value{
 A table and a graph
@@ -26,6 +28,20 @@ A table and a graph
 This function is used to to generate summary tables and graphs showing frequencies and percentages.
 }
 \examples{
-rGraf(data = wafanyikazi,group_var = Gender, xlab = "Gender",flip = FALSE, theme = theme_bw(), title = "Distribution of Gender")
+## Specify the theme
+
+theme <- theme(legend.position = "right",
+         legend.direction = "vertical",
+         legend.title = element_blank(),
+         plot.title = element_text( size = rel(1.6), hjust = 0.5),
+         plot.subtitle = element_text(size = rel(1.4), hjust = 0.5),
+         axis.text.x = element_text(size =rel(1.4),angle = 0),
+         axis.text.y = element_text(size =rel(1.4),angle = 0),
+         axis.title = element_text( size = rel(1.5)),
+         panel.background = element_rect(fill = NA))
+
+## Call the function
+
+rGraf(data = wafanyikazi,group_var = Gender, xlab = "Gender",flip = FALSE,col= "#154360", theme = theme_bw(), title = "Distribution of Gender")
 
 }
