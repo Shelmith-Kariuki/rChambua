@@ -42,6 +42,6 @@ theme <- theme(legend.position = "right",
 
 ## Call the function
 
-rGraf(data = wafanyikazi,group_var = Gender, xlab = "Gender",flip = FALSE,col= "#154360", theme = theme_bw(), title = "Distribution of Gender")
+rGraf(data = wafanyikazi,group_var = Gender, xlab = "Gender",flip = FALSE,col= "#154360", theme = theme, title = "Distribution of Gender")
 
 }
