@@ -14,7 +14,8 @@
 #'
 #' @examples
 #' # Suppose we have the yield of corn for two types of fertilizer, A and B.
-#' # Test to see whether there is a difference in the means of yield produced, from application of both types of fertilizers.
+#' # Test to see whether there is a difference in the means of yield produced,
+#' # from application of both types of fertilizers.
 #' # H0: UA = UB , H1: UA != UB
 #'
 #' yieldA <- c(452, 874, 554, 447, 356, 754 , 558, 574, 664, 682, 547, 435, 245)
@@ -33,9 +34,9 @@
 #' hypothesised.diff <- 0
 #' equal.variance <- TRUE
 #'
-#' tcalc(n1, n2, s1, s2, barx1, barx2,  hypothesised.diff, equal.variance)
+#' tcalc2S(n1, n2, s1, s2, barx1, barx2,  hypothesised.diff, equal.variance)
 
-tcalc <- function(n1, n2, s1, s2, barx1, barx2,  hypothesised.diff, equal.variance){
+tcalc2S <- function(n1, n2, s1, s2, barx1, barx2,  hypothesised.diff, equal.variance){
 
   if(equal.variance == TRUE){
 
