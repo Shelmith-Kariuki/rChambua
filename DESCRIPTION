@@ -1,5 +1,5 @@
 Package: rChambua
-Title: A Package for carrying out simple data analysis tasks
+Title: A Package that contains sample datasets and simple data analysis functions.
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Shelmith",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "kariukishelmith@gmail.com",
            comment = structure("YOUR-ORCID-ID", .Names = "ORCID"))
-Description: This package contains functions that are used at Geopoll, to generate descriptive statistics.
+Description: This package contains sample datasets and simple data analysis functions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

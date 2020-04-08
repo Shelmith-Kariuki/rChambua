@@ -7,8 +7,7 @@
 
 <!-- badges: end -->
 
-rChambua contains functions that can be used for day to day data
-analysis tasks.
+rChambua contains sample datasets and simple data analysis functions.
 
 ## Installation
 
@@ -28,22 +27,11 @@ devtools::install_github("Shelmith-Kariuki/rChambua")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+To read in the `Wafanyikazi` dataset, use the code below
 
 ``` r
 library(rChambua)
-## basic example code
+df <- wafanyikazi
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
 
-``` r
-## Coming Soon
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
