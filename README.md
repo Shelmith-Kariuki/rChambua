@@ -29,7 +29,7 @@ _Note: This package is not yet available on CRAN._
 
 ## Example
 
-One of the datasets available in this package is Wfanyikazi. Wafanyikazi is the swahili name for "Employees". It is a simulated dataset that cotains basic information of employees in a certain compay. 
+One of the datasets available in this package is Wafanyikazi. Wafanyikazi is the swahili name for "Employees". It is a simulated dataset that cotains basic information of employees in a certain compay. 
 
 To read in the `Wafanyikazi` dataset, use the code below.
 
