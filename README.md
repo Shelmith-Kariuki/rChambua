@@ -22,14 +22,16 @@ devtools::install_github("Shelmith-Kariuki/rChambua")
 
 And the released version from [CRAN](https://CRAN.R-project.org) with:
 
-Note: This package is not yet available on CRAN. 
 ``` r
 install.packages("rChambua")
 ```
+_Note: This package is not yet available on CRAN._
 
 ## Example
 
-To read in the `Wafanyikazi` dataset, use the code below
+One of the datasets available in this package is Wfanyikazi. Wafanyikazi is the swahili name for "Employees". It is a simulated dataset that cotains basic information of employees in a certain compay. 
+
+To read in the `Wafanyikazi` dataset, use the code below.
 
 ``` r
 library(rChambua)
